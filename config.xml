@@ -1,80 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-	<widget xmlns = "http://www.w3.org/ns/widgets"
-		xmlns:gap = "http://phonegap.com/ns/1.0"
-		xmlns:cdv =	"http://cordova.apache.org/ns/1.0">
-		id="com.ve.ricardolugaresi.pruebas"
-		versionCode="0.0.4"
-		version   = "1.0.2">
-		<name>test</name>
-		<description>
-Desarrollo para realizar poruebas dentro de los emuladores y cel		</description>
-		<author href="https://www.ricardolugaresi.com.ve" email="rflugaresir@gmail.com">
-Ricardo Lugaresi
-		</author>
-		<preference name="phonegap-version" value="3.5.0" />
-		<preference name="orientation" value="default" />
-		<preference name="fullscreen" value="true" />
-		<preference name="target-device" value="universal" />
-		<preference name="webviewbounce" value="false" />
-		<preference name="prerendered-icon" value="false" />
-		<preference name="stay-in-webview" value="true" />
-		<preference name="ios-statusbarstyle" value="black-opaque" />
-		<preference name="detect-data-types" value="true" />
-		<preference name="exit-on-suspend" value="false" />
-		<preference name="show-splash-screen-spinner" value="false" />
-		<preference name="auto-hide-splash-screen" value="false" />
-		<preference name="EnableViewportScale" value="false" />
-		<preference name="MediaPlaybackRequiresUserAction" value="false" />
-		<preference name="AllowInlineMediaPlayback" value="false" />
-		<preference name="BackupWebStorage" value="cloud" />
-		<preference name="TopActivityIndicator" value="gray" />
-		<preference name="KeyboardDisplayRequiresUserAction" value="false" />
-		<preference name="HideKeyboardFormAccessoryBar" value="false" />
-		<preference name="SuppressesIncrementalRendering" value="false" />
-		<preference name="android-minSdkVersion" value="7" />
-		<preference name="android-installLocation" value="auto" />
-		<preference name="SplashScreenDelay" value="5000" />
-		<preference name="ErrorUrl" value=""/>
-		<preference name="BackgroundColor" value=""/>
-		<preference name="KeepRunning" value="true"/>
-		<preference name="DisallowOverscroll" value="true"/>
-		<preference name="LoadingDialog" value=","/> 
-		<preference name="LoadUrlTimeoutValue" value="20000" />
-		<preference name="disable-cursor" value="true" />
-		<gap:platform name="android" />
-		
-		<feature name="http://api.phonegap.com/1.0/contacts"/>
-		<feature name="http://api.phonegap.com/1.0/media"/>
-		<feature name="http://api.phonegap.com/1.0/network"/>
-		
-		<!-- for Android (you will find one in res/xml) -->
-		<feature name="SocialSharing">
-  			<param name="android-package" value="nl.xservices.plugins.SocialSharing" />
-		</feature>	
-			
-		<plugin name="nl.x-services.plugins.socialsharing" />		
-		<plugin name="org.apache.cordova.contacts" source="pgb" spec="0.2.16" />
-		<plugin name="org.apache.cordova.device" source="pgb" spec="0.3.0" />
-		<plugin name="org.apache.cordova.device-orientation" source="pgb" spec="0.3.11" />
-		<plugin name="org.apache.cordova.dialogs" source="pgb" spec="0.3.0" />
-		<plugin name="org.apache.cordova.inappbrowser" source="pgb" spec="0.6.0" />
-		<gap:plugin name="plugin.google.maps" source="plugins.cordova.io" version="~1.2.4">
-    	<param name="AIzaSyDF779HoOUqRRD4IiagkD9KYNpEx3-2Tp0" value="xyz" />
-   	 	<param name="AIzaSyB6tX7GQsLrG9GPyqwGv7rO7wdzOqmNLiE" value="123" />
-  		</gap:plugin>
-		
-		<icon src="imagenes/logo_app_4.png" gap:platform="android" gap:density="ldpi" />
-		<icon src="imagenes/logo_app_3.png" gap:platform="android" gap:density="mdpi" />
-		<icon src="imagenes/logo_app_2.png" gap:platform="android" gap:density="hdpi" />
-		<icon src="imagenes/logo_app_1.png" gap:platform="android" gap:density="xhdpi" />
-		<icon src="imagenes/logo_app_5.png" gap:platform="android" gap:density="xxhdpi" />
-		<icon src="imagenes/logo_app_6.png" gap:platform="android" gap:density="xxxhdpi" />
-		<icon src="imagenes/icon.png" />
-		
-		<access origin="*" />
-		<access origin="tel:*" />
-		<access origin="mailto:*" />
-		<access origin="sms:*" />
-		
-		
-	</widget>
+<?xml version="1.0" encoding="UTF-8"?>	<widget xmlns = "http://www.w3.org/ns/widgets"		xmlns:gap = "http://phonegap.com/ns/1.0"		id        = ""		versionCode=""		version   = "">		<name>test</name>		<description>Desarrollo para realizar poruebas dentro de los emuladores y cel		</description>		<author href="https://www.ricardolugaresi.com.ve" email="rflugaresir@gmail.com">Ricardo Lugaresi		</author>		<preference name="phonegap-version" value="cli-5.2.0" />		<preference name="orientation" value="default" />		<preference name="fullscreen" value="true" />		<preference name="target-device" value="universal" />		<preference name="webviewbounce" value="true" />		<preference name="prerendered-icon" value="true" />		<preference name="stay-in-webview" value="true" />		<preference name="ios-statusbarstyle" value="black-opaque" />		<preference name="detect-data-types" value="true" />		<preference name="exit-on-suspend" value="true" />		<preference name="show-splash-screen-spinner" value="true" />		<preference name="auto-hide-splash-screen" value="true" />		<preference name="EnableViewportScale" value="true" />		<preference name="MediaPlaybackRequiresUserAction" value="true" />		<preference name="AllowInlineMediaPlayback" value="true" />		<preference name="BackupWebStorage" value="cloud" />		<preference name="TopActivityIndicator" value="gray" />		<preference name="KeyboardDisplayRequiresUserAction" value="true" />		<preference name="HideKeyboardFormAccessoryBar" value="true" />		<preference name="SuppressesIncrementalRendering" value="true" />		<preference name="android-minSdkVersion" value="7" />		<preference name="android-installLocation" value="auto" />		<preference name="SplashScreenDelay" value="5000" />		<preference name="ErrorUrl" value=""/>		<preference name="BackgroundColor" value=""/>		<preference name="KeepRunning" value="true"/>		<preference name="DisallowOverscroll" value="true"/>		<preference name="LoadingDialog" value=","/> 		<preference name="LoadUrlTimeoutValue" value="20000" />		<preference name="disable-cursor" value="true" />		<gap:platform name="ios" />		<gap:platform name="android" />		<feature name="http://api.phonegap.com/1.0/contacts"/>		<feature name="http://api.phonegap.com/1.0/geolocation"/>		<feature name="http://api.phonegap.com/1.0/media"/>		<feature name="http://api.phonegap.com/1.0/network"/>		<feature name="http://api.phonegap.com/1.0/contacts"/>		<feature name="http://api.phonegap.com/1.0/media"/>		<feature name="http://api.phonegap.com/1.0/network"/>		<gap:plugin name="org.apache.cordova.battery-status"  />		<gap:plugin name="org.apache.cordova.camera"  />		<gap:plugin name="org.apache.cordova.console"  />		<gap:plugin name="org.apache.cordova.contacts"  />		<gap:plugin name="org.apache.cordova.device"  />		<gap:plugin name="org.apache.cordova.device-orientation"  />		<gap:plugin name="org.apache.cordova.device-motion"  />		<gap:plugin name="org.apache.cordova.dialogs"  />		<gap:plugin name="org.apache.cordova.file.FileUtils"  />		<gap:plugin name="org.apache.cordova.geolocation"  />		<gap:plugin name="org.apache.cordova.globalization"  />		<gap:plugin name="org.apache.cordova.inappbrowser"  />		<gap:plugin name="org.apache.cordova.media"  />		<gap:plugin name="org.apache.cordova.media-capture"  />		<gap:plugin name="org.apache.cordova.network-information"  />		<gap:plugin name="org.apache.cordova.splashscreen"  />		<gap:plugin name="org.apache.cordova.vibration"  />		<icon src="imagenes/logo_app_4.png" gap:platform="android" gap:density="ldpi" />		<icon src="imagenes/logo_app_3.png" gap:platform="android" gap:density="mdpi" />		<icon src="imagenes/logo_app_2.png" gap:platform="android" gap:density="hdpi" />		<icon src="imagenes/logo_app_1.png" gap:platform="android" gap:density="xhdpi" />		<icon src="imagenes/logo_app_5.png" gap:platform="android" gap:density="xxhdpi" />		<icon src="imagenes/logo_app_6.png" gap:platform="android" gap:density="xxxhdpi" />		<icon src="imagenes/icon.png" />		<access origin="*" />		<access origin="tel:*" />		<access origin="mailto:*" />		<access origin="sms:*" />		<gap:plugin name="com.adobe.plugins.fastcanvas" />		<gap:plugin name="nl.x-services.plugins.socialsharing"  />		<gap:plugin name="plugin.google.maps"  version="~1.2.4">			 <param name="AIzaSyDF779HoOUqRRD4IiagkD9KYNpEx3-2Tp0" value="xyz" />			 <param name="AIzaSyB6tX7GQsLrG9GPyqwGv7rO7wdzOqmNLiE" value="123" />		</gap:plugin>	</widget>
