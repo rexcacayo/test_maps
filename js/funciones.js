@@ -65,8 +65,8 @@ var map;
 $(document).ready(function(){
   var map = new GMaps({
     el: '#map',
-    lat: 51.5073346,
-    lng: -0.1276831,
+    lat: 40.452,
+    lng: -3.688,
     zoom:8
   });
 
