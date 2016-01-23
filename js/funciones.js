@@ -69,7 +69,7 @@ $(document).ready(function(){
       map.setCenter(position.coords.latitude, position.coords.longitude);
        map.drawRoute({
         origin: [position.coords.latitude, position.coords.longitude],
-        destination: [10.217, -67.554],
+        destination: [40.452, -3.688],
         travelMode: 'driving',
         strokeColor: '#000',
         strokeOpacity: 0.6,
