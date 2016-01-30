@@ -27,7 +27,7 @@ GMaps.geolocate({
     	alert("No soporta geolocalizacion");
     }
 });
-//gps_nativo();
+gps_nativo();
 $('<img/>').attr('src', url).appendTo('#map');
 }
 
