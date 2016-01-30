@@ -1,86 +1,62 @@
-function map1(){
-var map;
-$(document).ready(function(){
-  var map = new GMaps({
-    el: '#map',
-    lat: 51.5073346,
-  	lng: -0.1276831,
-  });
+function map2(){
+var lat1;
+var lon1;
+var lat2;
+var lon2;
 
-  GMaps.geolocate({
-    success: function(position){
-      map.setCenter(position.coords.latitude, position.coords.longitude);
-
-      map.addMarker({
-        lat: position.coords.latitude,
-        lng: position.coords.longitude,
-        title: 'Ubicacion Actual.',
-        infoWindow: {
-          content: '<p>Ubicacion Actual!</p>'
-        }
-      });
-    },
-    error: function(error){
-      alert('Geolocation failed: '+error.message);
-    },
-    not_supported: function(){
-      alert("No soporta geolocalizacion");
-    }
-  });
+url = GMaps.staticMapURL({
+  size: [610, 390],
+  lat: 40.452,
+  lng: -3.680,
+  markers:[{lat: 40.452, lng:  -3.688, color: 'blue'}],
 });
 
-}
-
-function map2(){
-var map = new GMaps({
-    el: '#map',
-    lat: 40.452,
-    lng: -3.688,
-	zoom: 13,
-    zoomControl : true,
-    zoomControlOpt: {
-        style : 'SMALL',
-        position: 'TOP_LEFT'
-    },
-    panControl : false,
-  });
-map.addMarker({
-      lat: 40.452,
-      lng: -3.688,
-      title: 'Santiago Bernabéu',
-      infoWindow: {
-        content: '<p>Santiago Bernabéu de Yeste (Almansa, Albacete, 8 de junio de 1895 – Madrid, 2 de junio de 1978) fue un futbolista, entrenador y presidente del Real Madrid ....</p>' }
-    });
-
-}
-
-function map3(){
-var map;
-$(document).ready(function(){
-  var map = new GMaps({
-    el: '#map',
-    lat: 40.452,
-    lng: -3.688,
-    zoom:8
-  });
-
-  GMaps.geolocate({
-    success: function(position){
-      map.setCenter(position.coords.latitude, position.coords.longitude);
-       map.drawRoute({
-        origin: [position.coords.latitude, position.coords.longitude],
-        destination: [40.452, -3.688],
-        travelMode: 'driving',
-        strokeColor: '#000',
-        strokeOpacity: 0.6,
-        strokeWeight: 6
-      });
+GMaps.geolocate({
+	success: function(position){
+		lat1=position.coords.latitude;
+		lon1=position.coords.longitude;
+		lat2=40.452;
+		lon2=-3.680;
+		Distancia = Dist(lat1, lon1, lat2, lon2) + "Km";
+		$('#pos').html(Distancia);
     },
     error: function(error){
-      alert('Geolocation failed: '+error.message);
+    	alert('Geolocation failed: '+error.message);
     },
     not_supported: function(){
-      alert("Your browser does not support geolocation");
+    	alert("No soporta geolocalizacion");
     }
-  });
-});}
+});
+gps_nativo();
+$('<img/>').attr('src', url).appendTo('#map');
+}
+
+function gps_nativo() {
+	var plataforma;
+	if($.browser.device = (/iphone|ipad|ipod/i.test(navigator.userAgent.toLowerCase()))){
+		plataforma="http://maps.apple.com/maps?saddr=Current%20Location&daddr=Estadio+Santiago+Bernabeu";
+	}
+	if($.browser.device = (/android/i.test(navigator.userAgent.toLowerCase()))){
+		plataforma="geo:40.452,-3.680";	
+	}
+	
+	document.getElementById("url_nativo").href=plataforma;
+}
+
+function Dist(lat1, lon1, lat2, lon2)
+  {
+  rad = function(x) {return x*Math.PI/180;}
+
+  var R     = 6378.137;                     //Radio de la tierra en km
+  var dLat  = rad( lat2 - lat1 );
+  var dLong = rad( lon2 - lon1 );
+
+  var a = Math.sin(dLat/2) * Math.sin(dLat/2) + Math.cos(rad(lat1)) * Math.cos(rad(lat2)) * Math.sin(dLong/2) * Math.sin(dLong/2);
+  var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+  var d = R * c;
+
+  return d.toFixed(3);                      //Retorna tres decimales
+  
+}
+
+

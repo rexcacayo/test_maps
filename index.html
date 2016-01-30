@@ -20,7 +20,7 @@ $( document ).ready(function() {
     	'<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6tX7GQsLrG9GPyqwGv7rO7wdzOqmNLiE&callback=initMap"></script>';
 	}
 	if($.browser.device = (/android/i.test(navigator.userAgent.toLowerCase()))){
-    	'<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDF779HoOUqRRD4IiagkD9KYNpEx3-2Tp0=initMap"></script>;'
+    	'<script src="https://maps.googleapis.com/maps/api/js?sensor=false?key=AIzaSyDF779HoOUqRRD4IiagkD9KYNpEx3-2Tp0=initMap"></script>;'
     }else{
 		'<script src="https://maps.googleapis.com/maps/api/js"></script>';
 	}
@@ -28,26 +28,22 @@ $( document ).ready(function() {
 })
 </script>
 </head>
-<body>
+<body onLoad="map2();">
 <!--Pagina de inicio!-->
 <div data-role="page" id="home" data-theme="a">
 	<div data-role="header" >
-		<h1>EXAMEN PRACTICO</h1>
+		<h1>EXAMEN R.L.</h1>
 	</div>
 	<div data-role="content">
-    HAGA CLICK EN LA BARRA DE BOTONES PARA EMPEZAR
-	    <div id="map">
-        	<!--aqui va el mapa!-->
-        </div>
+	    <a href="#" id="url_nativo">
+        	<div id="map">
+        		<!--aqui va el mapa!-->
+        	</div>
+        </a>
 	</div>
  	<div data-role="footer" data-position="fixed">
-    	<div data-role="navbar">
-      		<ul>
-        		<li><a href="#" data-icon="home" data-transition="flip" onClick="map1();">Yo</a></li>
-        		<li><a href="#" data-icon="info" data-transition="flip" onClick="map2();">Punto Referencia</a></li>
-        		<li><a href="#" data-icon="email" data-transition="flip" onclick="map3();">Distancia</a></li>
-      		</ul>
-    	</div>
+    	<h1>Distancia:</h1>
+        <div id="pos"><!---valor de dista entre puntos---!--></div>
   	</div>
 </div>
 </body>
