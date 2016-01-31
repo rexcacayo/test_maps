@@ -6,17 +6,17 @@ var lon2;
 //propiedad para utilizar el mapacomo una imagen, para hacerlo estatico
 url = GMaps.staticMapURL({
   size: [610, 390],
-  lat: 40.452,
-  lng: -3.680,
-  markers:[{lat: 40.452, lng:  -3.688, color: 'blue'}],
+  lat: 40.4530541,
+  lng: -3.688344499999971,
+  markers:[{lat: 40.4530541, lng:  -3.688344499999971, color: 'blue'}],
 });
 ///geo localizacion, da posicion actual
 GMaps.geolocate({
 	success: function(position){
 		lat1=position.coords.latitude;
 		lon1=position.coords.longitude;
-		lat2=40.452;
-		lon2=-3.680;
+		lat2=40.4530541;
+		lon2=-3.688344499999971;
 //calculo de distancia		
 		Distancia = Dist(lat1, lon1, lat2, lon2) + "Km";
 		$('#pos').html(Distancia);
@@ -40,7 +40,7 @@ function gps_nativo() {
 		plataforma="http://maps.apple.com/maps?saddr=Current%20Location&daddr=Estadio+Santiago+Bernabeu";
 	}
 	if($.browser.device = (/android/i.test(navigator.userAgent.toLowerCase()))){
-		plataforma="http://maps.google.com/maps?q=40.4530575,-3.690185";
+		plataforma="http://maps.google.com/maps?q=40.4530541,-3.688344499999971";
 	}
 	
 	document.getElementById("url_nativo").href=plataforma;
