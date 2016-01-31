@@ -3,20 +3,21 @@ var lat1;
 var lon1;
 var lat2;
 var lon2;
-
+//propiedad para utilizar el mapacomo una imagen, para hacerlo estatico
 url = GMaps.staticMapURL({
   size: [610, 390],
   lat: 40.452,
   lng: -3.680,
   markers:[{lat: 40.452, lng:  -3.688, color: 'blue'}],
 });
-
+///geo localizacion, da posicion actual
 GMaps.geolocate({
 	success: function(position){
 		lat1=position.coords.latitude;
 		lon1=position.coords.longitude;
 		lat2=40.452;
 		lon2=-3.680;
+//calculo de distancia		
 		Distancia = Dist(lat1, lon1, lat2, lon2) + "Km";
 		$('#pos').html(Distancia);
     },
@@ -27,10 +28,12 @@ GMaps.geolocate({
     	alert("No soporta geolocalizacion");
     }
 });
+//llamado de funcion de href
 gps_nativo();
 $('<img/>').attr('src', url).appendTo('#map');
 }
-
+//funcion que permite determinar el tipo de sistema y modificar el atributo href de la etiqueta <a> para adaptar la instruccion 
+//al tipo de sistema
 function gps_nativo() {
 	var plataforma;
 	if($.browser.device = (/iphone|ipad|ipod/i.test(navigator.userAgent.toLowerCase()))){
@@ -42,7 +45,7 @@ function gps_nativo() {
 	
 	document.getElementById("url_nativo").href=plataforma;
 }
-
+///calculo sde distancia entre coordenadas
 function Dist(lat1, lon1, lat2, lon2)
   {
   rad = function(x) {return x*Math.PI/180;}
