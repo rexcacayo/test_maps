@@ -37,7 +37,6 @@ function gps_nativo() {
 		plataforma="http://maps.apple.com/maps?saddr=Current%20Location&daddr=Estadio+Santiago+Bernabeu";
 	}
 	if($.browser.device = (/android/i.test(navigator.userAgent.toLowerCase()))){
-		//plataforma="geo:40.452,-3.680";	
 		plataforma="http://maps.google.com/maps?q=40.4530575,-3.690185";
 	}
 	
