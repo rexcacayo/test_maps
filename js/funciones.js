@@ -37,10 +37,10 @@ $('<img/>').attr('src', url).appendTo('#map');
 function gps_nativo() {
 	var plataforma;
 	if($.browser.device = (/iphone|ipad|ipod/i.test(navigator.userAgent.toLowerCase()))){
-		plataforma="http://maps.apple.com/maps?saddr=Current%20Location&daddr=Estadio+Santiago+Bernabeu";
+		plataforma="";///ptos y api de google
 	}
 	if($.browser.device = (/android/i.test(navigator.userAgent.toLowerCase()))){
-		plataforma="http://maps.google.com/maps?q=40.4530541,-3.68834450";
+		plataforma="";///ptos y api google
 	}
 	
 	document.getElementById("url_nativo").href=plataforma;
